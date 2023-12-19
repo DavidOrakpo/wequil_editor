@@ -5,13 +5,13 @@ import 'package:wequil_editor/wequil_editor.dart';
 class WeQuilToolBar extends StatelessWidget {
   final WEquilEditorController editorController;
   final Color sectionDividerColor;
-  final Color primaryColor;
+  final Color iconSelectedColor;
 
   const WeQuilToolBar({
     super.key,
     required this.editorController,
     required this.sectionDividerColor,
-    required this.primaryColor,
+    required this.iconSelectedColor,
   });
 
   @override
@@ -20,8 +20,11 @@ class WeQuilToolBar extends StatelessWidget {
       toolbarIconSize: 20,
       controller: editorController.quillController,
       sectionDividerColor: sectionDividerColor,
-      color: primaryColor,
+      // color: primaryColor,
       multiRowsDisplay: false,
+      iconTheme: QuillIconTheme(
+        iconSelectedColor: iconSelectedColor,
+      ),
       showBackgroundColorButton: false,
       showLink: false,
       showQuote: true,
