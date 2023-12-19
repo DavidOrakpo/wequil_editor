@@ -6,12 +6,14 @@ class WeQuilToolBar extends StatelessWidget {
   final WEquilEditorController editorController;
   final Color sectionDividerColor;
   final Color iconSelectedColor;
+  final Color iconSelectedFillColor;
 
   const WeQuilToolBar({
     super.key,
     required this.editorController,
     required this.sectionDividerColor,
     required this.iconSelectedColor,
+    required this.iconSelectedFillColor,
   });
 
   @override
@@ -24,6 +26,7 @@ class WeQuilToolBar extends StatelessWidget {
       multiRowsDisplay: false,
       iconTheme: QuillIconTheme(
         iconSelectedColor: iconSelectedColor,
+        iconSelectedFillColor: iconSelectedFillColor,
       ),
       showBackgroundColorButton: false,
       showLink: false,
