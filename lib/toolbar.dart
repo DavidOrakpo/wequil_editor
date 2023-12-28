@@ -6,10 +6,12 @@ class WeQuilToolBar extends StatelessWidget {
   final WEquilEditorController editorController;
   final Color sectionDividerColor;
   final Color iconSelectedColor;
+  final List<QuillCustomButton>? customButtons;
   final Color iconSelectedFillColor;
 
   const WeQuilToolBar({
     super.key,
+    this.customButtons,
     required this.editorController,
     required this.sectionDividerColor,
     required this.iconSelectedColor,
@@ -31,6 +33,7 @@ class WeQuilToolBar extends StatelessWidget {
       showBackgroundColorButton: false,
       showLink: false,
       showQuote: true,
+      customButtons: customButtons ?? [],
       showUndo: false,
       showRedo: false,
       showIndent: true,
